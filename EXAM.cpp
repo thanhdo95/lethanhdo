@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <math.h>
-double parameter(double a,double b, double c){
+double parameter(int a,int b, int c){
 	if( (a+b>c) && (a+c>b) && (b+c>a)){
 		double p = a + b +c;
 		return p;
 	}
 }
-double area(double a,double b, double c){
+double area(int a,int b, int c){
 	if((a+b>c) && (a+c>b) && (b+c>a)){
 		double p;
 		double p2 = p/2;
@@ -24,7 +24,7 @@ int main(){
 	scanf("%d", &c);
 	double p = parameter(a,b,c);
 	double s = area(a,b,c);
-	if((a+b>c) && (a+c>b) && (b+c>a)){	
+	if((a+b>c) && (a+c>b) && (b+c>a) && a>0 && b>0 && c>0 ){	
 		printf("Parameter: %lf\n", p);
 		printf("Area: %lf\n", s);
 		}else{
